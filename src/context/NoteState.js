@@ -5,7 +5,7 @@ const NoteState = (props) => {
   const initialBlogs = [];
   const [blogs, setBlogs] = useState(initialBlogs);
   const fetchBlog = async (title, description, tag) => {
-    const response = await fetch(`http://localhost:5000/blog/fetchblog`, {
+    const response = await fetch(`https://note-z-backend.onrender.com/blog/fetchblog`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -17,7 +17,7 @@ const NoteState = (props) => {
   };
   const addBlog = async (title, description, tag) => {
     //eslint-disable-next-line
-    const response = await fetch(`http://localhost:5000/blog/addblog`, {
+    const response = await fetch(`https://note-z-backend.onrender.com/blog/addblog`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -32,7 +32,7 @@ const NoteState = (props) => {
   const editBlog = async (id, title, description, tag) => {
     //eslint-disable-next-line
     const response = await fetch(
-      `http://localhost:5000/blog/updateblog/${id}`,
+      `https://note-z-backend.onrender.com/blog/updateblog/${id}`,
       {
         method: "PUT",
         headers: {
@@ -58,7 +58,7 @@ const NoteState = (props) => {
 
   const deleteBlog = async (id) => {
     const response = await fetch(
-      `http://localhost:5000/blog/deleteblog/${id}`,
+      `https://note-z-backend.onrender.com/blog/deleteblog/${id}`,
       {
         method: "DELETE",
         headers: {
