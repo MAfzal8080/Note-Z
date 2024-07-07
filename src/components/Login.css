@@ -1,0 +1,9 @@
+.formBox{
+    width: 400px;
+}
+
+@media screen and (max-width: 576px) {
+    .formBox{
+        width: 100%;
+    }
+}
