@@ -8,7 +8,9 @@ require('dotenv').config()
 const port = process.env.port
 app.use(cors())
 app.use(express.json())
-
+app.get('/', (req, res) => {
+  res.send('Testing!');
+});
 app.use('/blog', require('./routes/blog'))
 app.use('/auth', require('./routes/auth'))
 
